@@ -17,5 +17,5 @@
 ### Sur Ordinateur
 1. Clonez ce dépôt :
    ```bash
-   git clone https://github.com/VOTRE_NOM_D_UTILISATEUR/van.ali.7.git
+   git clone https://github.com/saiiah-ali-328-prog/van.ali.7.git
    cd van.ali.7
