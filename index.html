@@ -136,14 +136,20 @@
   
   <input type="text" class="input-field" id="promptInput" placeholder="✍️ Décrivez votre image...">
   
-  <select class="model-select" id="modelSelect">
-    <option value="flux">Flux (Recommandé)</option>
-    <option value="turbo">Turbo (Rapide)</option>
-    <option value="flux-realism">Flux Realism</option>
-    <option value="flux-anime">Flux Anime</option>
-    <option value="flux-3d">Flux 3D</option>
-    <option value="any-dark">Any Dark</option>
-  </select>
+ <select class="model-select" id="modelSelect">
+  <option value="flux">Flux (Recommandé)</option>
+  <option value="gptimage">GPT Image</option>
+  <option value="gptimage-large">GPT Image Large</option>
+  <option value="gpt-image-2">GPT Image 2</option>
+  <option value="kontext">Kontext</option>
+  <option value="seedream5">Seedream 5</option>
+  <option value="seedream5-pro">Seedream 5 Pro</option>
+  <option value="ideogram-v4-turbo">Ideogram V4 Turbo</option>
+  <option value="ideogram-v4-quality">Ideogram V4 Quality</option>
+  <option value="grok-imagine">Grok Imagine</option>
+  <option value="grok-imagine-pro">Grok Imagine Pro</option>
+  <option value="nanobanana-pro">Nanobanana Pro</option>
+</select>
   
   <button class="generate-btn" id="generateBtn" onclick="generateImage()">
      Générer l'image
@@ -163,7 +169,9 @@
 </div>
 
 <script>
-  let currentImageUrl = '';
+ const API_KEY = 'pk_2P6f3vb6dLmQovrf';
+ 
+ let currentImageUrl = '';
   
   async function generateImage() {
     const prompt = document.getElementById('promptInput').value.trim();
