@@ -188,8 +188,9 @@
     
     try {
       const seed = Math.floor(Math.random() * 1000000);
-      const url = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?model=${model}&width=1024&height=1024&seed=${seed}&nologo=true`;
-      
+      const API_KEY = 'pk_2P6f3vb6dLmQovrf';
+
+      const url = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?model=${model}&width=1024&height=1024&seed=${seed}&nologo=true&token=${API_KEY}`;      
       currentImageUrl = url;
       
       const response = await fetch(url);
